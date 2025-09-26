@@ -28,6 +28,7 @@ export interface HeartAssessmentRequest {
 export interface ChatRequest {
   sessionId: string;
   message: string;
+  isUser: boolean;
 }
 
 // Medical data API

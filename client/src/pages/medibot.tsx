@@ -76,6 +76,7 @@ export default function MediBot() {
     sendMessageMutation.mutate({
       sessionId,
       message: data.message,
+      isUser: true,
     });
   };
 
