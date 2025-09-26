@@ -29,7 +29,7 @@ This is a comprehensive full-stack application built for performance, scalabilit
 
 * **Runtime:** **Node.js**
 * **Framework:** **Express.js** & **TypeScript**
-* **Database:** **PostgreSQL** (via **Neon Serverless**)
+* **Database:** **PostgreSQL** 
 * **ORM:** **Drizzle ORM** (for type-safe operations)
 * **AI Integration:** **OpenAI API** (GPT-5)
 
@@ -52,5 +52,13 @@ Clone the repository and install dependencies for both the client and server:
 
 ```bash
 git clone <github.com/saurabhbhandariii/MEDISCANAAI>
+
 cd MediScanAI
 npm install
+
+
+DEMO: 
+
+
+https://github.com/user-attachments/assets/e34c4a64-8ebd-4447-8236-a03f20bbf658
+
