@@ -8,20 +8,16 @@ export default function Navbar() {
     { href: "/disease-prediction", label: "Disease Prediction" },
     { href: "/drug-recommendation", label: "Drug Finder" },
     { href: "/heart-assessment", label: "Heart Risk" },
-    { href: "/medibot", label: "MediBot" },
   ];
 
   return (
-    <header className="bg-card border-b border-border sticky top-0 z-50">
+    <header className="fixed top-0 inset-x-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-2" data-testid="link-home">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <i className="fas fa-heartbeat text-primary-foreground text-lg"></i>
-              </div>
-              <span className="text-xl font-bold text-foreground">HealthAI</span>
-              <span className="ai-badge">AI-Powered</span>
+              <i className="fas fa-heartbeat text-blue-600 text-3xl"></i>
+              <span className="text-2xl font-extrabold text-slate-900 tracking-tight">HealthAI</span>
             </Link>
           </div>
           

@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -245,7 +244,6 @@ export default function DiseasePrediction() {
         </div>
       </section>
       
-      <Footer />
     </div>
   );
 }

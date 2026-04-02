@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -110,7 +109,6 @@ export default function HeartAssessment() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-foreground mb-4">Heart Disease Risk Assessment</h1>
-            <p className="text-muted-foreground">AI-powered risk evaluation using LightGBM and EasyEnsemble algorithms</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -408,7 +406,6 @@ export default function HeartAssessment() {
         </div>
       </section>
       
-      <Footer />
     </div>
   );
 }

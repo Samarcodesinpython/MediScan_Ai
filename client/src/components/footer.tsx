@@ -35,11 +35,6 @@ export default function Footer() {
                   Heart Risk Assessment
                 </Link>
               </li>
-              <li>
-                <Link href="/medibot" className="hover:text-foreground transition-colors">
-                  MediBot AI Assistant
-                </Link>
-              </li>
             </ul>
           </div>
           

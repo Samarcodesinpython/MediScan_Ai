@@ -25,48 +25,44 @@ export default function FeaturesGrid() {
       description: "ML-based heart disease risk assessment using lifestyle factors",
       color: "destructive",
       cta: "Assess Risk"
-    },
-    {
-      href: "/medibot",
-      icon: "fas fa-robot",
-      title: "MediBot",
-      description: "AI health assistant with RAG and Mistral-7B for medical queries",
-      color: "green-500",
-      cta: "Chat Now"
     }
   ];
 
   return (
-    <section className="py-16 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Comprehensive AI Healthcare Solutions</h2>
+    <section className="py-24 bg-background relative overflow-hidden">
+      {/* Decorative background blur */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-foreground mb-4">Comprehensive AI Healthcare Solutions</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Our platform combines cutting-edge AI technologies to deliver personalized healthcare intelligence
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {features.map((feature, index) => {
+            return (
             <Link key={index} href={feature.href}>
               <div 
-                className="bg-card rounded-xl p-6 border border-border card-hover cursor-pointer"
+                className="bg-white rounded-2xl p-8 card-hover cursor-pointer h-full flex flex-col border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
                 data-testid={`card-${feature.title.toLowerCase().replace(/\s+/g, '-')}`}
               >
-                <div className={`w-12 h-12 bg-${feature.color}/10 rounded-lg flex items-center justify-center mb-4`}>
-                  <i className={`${feature.icon} text-${feature.color} text-xl`}></i>
+                <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
+                  <i className={`${feature.icon} text-2xl`}></i>
                 </div>
-                <h3 className="text-lg font-semibold text-card-foreground mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
+                <p className="text-slate-600 font-medium text-base mb-6 flex-grow">
                   {feature.description}
                 </p>
-                <div className={`flex items-center text-${feature.color} text-sm font-medium`}>
+                <div className="flex items-center text-blue-600 font-bold group">
                   <span>{feature.cta}</span>
-                  <i className="fas fa-arrow-right ml-2"></i>
+                  <i className="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                 </div>
               </div>
             </Link>
-          ))}
+          )})}
         </div>
       </div>
     </section>
